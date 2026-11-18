@@ -15,6 +15,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
       quote: `"Where we will exchange our vows before God, surrounded by your prayers and blessings."`,
       liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=St.+Anthony%27s+Church+Weliweriya",
       imageUrl: "/images%20(1).jpg",
+      frameClass: "aspect-[3/4] sm:aspect-auto sm:h-[450px] lg:aspect-auto lg:h-auto lg:min-h-[600px]",
       label: "The Ceremony",
       heading: "We Say"
     },
@@ -25,6 +26,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
       quote: `"An evening of joy, dinner and dancing as we celebrate our new beginning together."`,
       liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=The+Lakeside+Gampaha",
       imageUrl: "/23.jpg",
+      frameClass: "aspect-[3/2] lg:self-center",
       label: "The Reception",
       heading: "Where We"
     }
@@ -105,7 +107,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-                className="w-full lg:w-[65%] aspect-[3/4] sm:aspect-auto sm:h-[450px] lg:aspect-auto lg:h-auto lg:min-h-[600px] relative z-10"
+                className={`w-full lg:w-[65%] ${venue.frameClass} relative z-10`}
               >
                 <div className="absolute -inset-4 sm:-inset-6 border-[2px] border-brand-lavender/30 rounded-[3rem] -z-10 translate-x-2 sm:translate-x-4 translate-y-2 sm:translate-y-4" />
                 
