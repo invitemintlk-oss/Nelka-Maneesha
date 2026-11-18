@@ -9,7 +9,6 @@ interface IntroVideoProps {
 }
 
 export const INTRO_VIDEO_URL = '/images/gemini_generated_video_bb45b609.mp4';
-const INTRO_POSTER_URL = '/images/730d4226fe44c11f141c9b745b901fca.jpg';
 
 // Stage 1: blurred, paused video behind the names and the "View Invitation" button.
 // Stage 2: after the click the video plays clearly; when it ends (or Skip) the invitation opens.
@@ -48,8 +47,8 @@ export function IntroVideo({ onComplete, onMusicStart, readyToTransition = true 
     >
       <video
         ref={videoRef}
-        src={INTRO_VIDEO_URL}
-        poster={INTRO_POSTER_URL}
+        // '#t=0.1' makes mobile browsers draw the first frame while the video is paused.
+        src={`${INTRO_VIDEO_URL}#t=0.1`}
         muted
         playsInline
         preload="auto"
