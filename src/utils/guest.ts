@@ -1,6 +1,6 @@
 export const COUPLE = {
-  groom: 'Dananjaya',
-  bride: 'Piyumi',
+  groom: 'Maneesha',
+  bride: 'Nelka',
 } as const;
 
 export const GUEST_PREFIXES = ['Mr.', 'Mrs.', 'Miss', 'Mr. & Mrs.', 'Family', 'Dear'] as const;

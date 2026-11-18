@@ -80,6 +80,13 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
               : `Your presence means the world to us. Please kindly let us know if you will be able to join our celebration.`
             }
           </p>
+          <div className="bg-white/70 border border-brand-lavender/40 rounded-2xl px-6 py-5 mb-6 font-serif text-stone-700">
+            <p className="uppercase tracking-[0.2em] text-[11px] font-sans font-semibold text-brand-plum mb-3">
+              Kindly RSVP (regrets only) by 20th December 2026
+            </p>
+            <p className="text-lg">Nelka : <a className="hover:text-brand-plum" href="tel:+94767367196">076-7367196</a></p>
+            <p className="text-lg">Maneesha : <a className="hover:text-brand-plum" href="tel:+94719294374">071-9294374</a></p>
+          </div>
           <div className="w-12 h-[1px] bg-brand-lavender/50 mx-auto lg:mx-0" />
         </div>
 

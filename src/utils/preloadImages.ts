@@ -21,6 +21,7 @@ export function preloadImages(urls: string[], timeoutMs = 2500): Promise<void> {
 }
 
 export const INVITATION_IMAGE_URLS = [
-  '/ivory_satin_bow-removebg-preview.png',
-  '/images/hero-floral.jpg',
+  '/images/730d4226fe44c11f141c9b745b901fca.jpg',
+  '/images/457b7ffc34299f8cbf388654f080c496.jpg',
+  '/images/5edad323e1703d732866ada31a41218c.jpg',
 ] as const;

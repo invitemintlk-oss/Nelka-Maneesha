@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { Toaster } from 'sonner';
 
-import { EnvelopeOpening } from './components/EnvelopeOpening';
+import { IntroVideo } from './components/IntroVideo';
 import { InvitationContent } from './components/InvitationContent';
 import { Admin } from './components/Admin';
 import { INVITATION_IMAGE_URLS, preloadImages } from './utils/preloadImages';
@@ -23,7 +23,7 @@ export default function App() {
 
   let eventLabel = 'Our Wedding Celebration';
 
-  const weddingDate = new Date('2026-12-03T10:10:00');
+  const weddingDate = new Date('2027-01-07T15:15:00+05:30');
 
   useEffect(() => {
     if (isAdminRoute()) return;
@@ -106,11 +106,10 @@ export default function App() {
 
       <AnimatePresence mode="wait">
         {!showInvitation && (
-          <EnvelopeOpening
-            key="envelope"
+          <IntroVideo
+            key="intro"
             onComplete={handleEnvelopeComplete}
             onMusicStart={handleMusicStart}
-            event={eventParam}
             readyToTransition={assetsReady}
           />
         )}

@@ -5,7 +5,6 @@ import { FloatingPetals } from './FloatingPetals';
 import { CoupleDetails } from './CoupleDetails';
 import { CeremonyDetails } from './CeremonyDetails';
 import { Location } from './Location';
-import { Timeline } from './Timeline';
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
 import { WishesSection } from './WishesSection';
@@ -65,14 +64,6 @@ export function InvitationContent({
 
       <DeferredMount active={active} delay={120} minHeight="40vh">
         <div className="py-24 sm:py-32 bg-gradient-to-b from-brand-blush via-white to-brand-blush relative overflow-hidden">
-          {/* Watermark Background Image covering full section including padding */}
-          <div className="absolute inset-x-0 bottom-0 top-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center opacity-10 mix-blend-multiply">
-            <img 
-              src="/WhatsApp%20Image%202026-07-09%20at%2021.34.28.jpeg" 
-              alt="Watermark background" 
-              className="w-full h-full object-cover object-top sm:object-center sepia contrast-125" 
-            />
-          </div>
           <CoupleDetails />
         </div>
       </DeferredMount>
@@ -94,14 +85,16 @@ export function InvitationContent({
       <DeferredMount active={active} delay={360} minHeight="20vh">
         <div className="py-24 sm:py-32 relative overflow-hidden">
           <div className="absolute inset-0">
-            <img 
-              src="/images/hero-floral.jpg"
-              alt="Countdown Background"
-              className="w-full h-full object-cover" 
+            <img
+              src="/images/5edad323e1703d732866ada31a41218c.jpg"
+              alt="Arch of fairy lights"
+              loading="lazy"
+              className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 mb-16 text-center">
-            <span className="text-stone-900 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
+            <span className="text-[#F3E3B5] uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold">
               The Wait Is Almost Over
             </span>
           </div>
@@ -127,10 +120,11 @@ export function InvitationContent({
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Piyumi & Dananjaya</p>
+          <p className="font-display text-5xl sm:text-6xl text-stone-800 mb-2">Nelka & Maneesha</p>
           <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-400 font-semibold block mb-8">
-            December 3, 2026
+            N&amp;M &middot; 07.01.2027
           </span>
+          <p className="font-serif italic text-stone-500 text-lg mb-8">Thank you</p>
           <p className="text-stone-400 text-xs mt-2 font-sans tracking-wider px-6">
             Want a beautiful wedding website like this? Create yours with{' '}
             <a target="_blank" rel="noreferrer" className="text-brand-plum font-semibold hover:text-[#D4AF37] underline underline-offset-2 transition-colors" href="https://wa.me/94707819074">invitemint</a>

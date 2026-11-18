@@ -1,4 +1,4 @@
-// Piyumi & Dananjaya wedding: RSVP and Wishes backend.
+// Nelka & Maneesha wedding: RSVP and Wishes backend.
 // Spreadsheet: https://docs.google.com/spreadsheets/d/1pl3N0tOkkaJevOhW7JamEmYu0vpwEo0Qd9iRRM4R1pU/edit
 const SPREADSHEET_ID = '1pl3N0tOkkaJevOhW7JamEmYu0vpwEo0Qd9iRRM4R1pU';
 

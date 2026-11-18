@@ -9,13 +9,24 @@ interface LocationProps {
 export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
-      id: 'wedding',
-      name: "Pharo Hotel",
-      city: "Nittambuwa",
-      quote: `"A serene and elegant setting where we will celebrate our Poruwa ceremony and wedding with joy and laughter."`,
-      liveLocationUrl: "https://maps.app.goo.gl/CFjLwuRFHVszwEF77",
-      imageUrl: "/images/pharo-hotel.png",
-      label: "The Venue"
+      id: 'church',
+      name: "St. Anthony's Church",
+      city: "Weliweriya · Holy Mass at 3.15 P.M.",
+      quote: `"Where we will exchange our vows before God, surrounded by your prayers and blessings."`,
+      liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=St.+Anthony%27s+Church+Weliweriya",
+      imageUrl: "/images%20(1).jpg",
+      label: "The Ceremony",
+      heading: "We Say"
+    },
+    {
+      id: 'reception',
+      name: "The Lakeside",
+      city: "Gampaha · From 6.00 P.M. onwards",
+      quote: `"An evening of joy, dinner and dancing as we celebrate our new beginning together."`,
+      liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=The+Lakeside+Gampaha",
+      imageUrl: "/23.jpg",
+      label: "The Reception",
+      heading: "Where We"
     }
   ];
 
@@ -28,7 +39,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
         {venues.map((venue, index) => {
           const isReversed = index % 2 !== 0;
           return (
-            <div key={venue.id} className={`flex flex-col lg:flex-row${isReversed ? '-reverse' : ''} items-center lg:items-stretch gap-10 lg:gap-0 mt-4`}>
+            <div key={venue.id} className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center lg:items-stretch gap-10 lg:gap-0 mt-4`}>
               
               {/* Interactive Card */}
               <motion.div 
@@ -52,8 +63,8 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                     </div>
 
                     <h2 className="text-5xl sm:text-6xl font-display text-stone-800 mb-6 leading-tight drop-shadow-sm">
-                      Where We <br />
-                      <span className="italic font-light text-brand-plum">Celebrate</span>
+                      {venue.heading} <br />
+                      <span className="text-brand-plum">{venue.id === 'church' ? 'I Do' : 'Celebrate'}</span>
                     </h2>
 
                     <motion.div 
@@ -105,7 +116,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                   <img
                     src={venue.imageUrl}
                     alt={`${venue.name} Location`}
-                    className="absolute inset-0 w-full h-full object-cover object-[center_65%] transition-transform duration-[2s] ease-in-out group-hover/map:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[2s] ease-in-out group-hover/map:scale-105"
                   />
 
                   {/* Decorative Location Pin Overlay */}
